@@ -1,3 +1,5 @@
+.idea/
+*.iml
 /docs
 /build.properties
 /bin
