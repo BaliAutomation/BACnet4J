@@ -51,7 +51,7 @@ public class IpNetworkBuilder {
      *
      * @param broadcastAddress
      *            the broadcast address for the network
-     * @param networkPrefix
+     * @param networkPrefixLength
      *            the number of bits in the local subnet.
      * @return this
      */
@@ -69,7 +69,7 @@ public class IpNetworkBuilder {
      *            the address of the local subnet, NOT the subnet mask., e.g. 192.168.0.0. The subnet address is
      *            required because the given local bind address could be the wildcard address, i.e. 0.0.0.0, from
      *            which the broadcast address cannot be calculated.
-     * @param networkPrefix
+     * @param networkPrefixLength
      *            the number of bits in the local subnet.
      * @return this
      */
@@ -128,7 +128,6 @@ public class IpNetworkBuilder {
         if (broadcastAddress == null || subnetMask == null) {
             throw new IllegalArgumentException("Either withBroadcast or withSubnet must be called.");
         }
-
         return new IpNetwork(port, localBindAddress, broadcastAddress, subnetMask, localNetworkNumber, reuseAddress);
     }
 }

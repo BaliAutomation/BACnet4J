@@ -70,11 +70,11 @@ public class RemoteDevice implements Serializable {
         this.address = address;
     }
 
-    /**
-     * Add properties that are in in 'that' if they are not already in 'this'.
-     *
-     * @param that
-     */
+    ///**
+    // * Add properties that are in in 'that' if they are not already in 'this'.
+    // *
+    // * @param that
+    // */
     //    public void merge(final RemoteDevice that) {
     //        synchronized (objects) {
     //            for (final Map.Entry<ObjectIdentifier, RemoteObject> e : that.objects.entrySet()) {
